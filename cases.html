@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Cases | ThyroVaidya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .success-card {
+            transition: transform 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .success-card:hover {
+            transform: translateY(-5px);
+            border-color: #1a5d5a;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #1a5d5a, #4fd1c5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-[#fafcfb] text-slate-900">
+
+    <nav class="sticky top-0 z-50 glass border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <div
+                    class="w-8 h-8 bg-emerald-800 rounded-lg flex items-center justify-center text-white font-bold text-xl italic">
+                    T</div>
+                <span class="text-xl font-bold tracking-tight text-emerald-900">ThyroVaidya</span>
+            </a>
+            <div class="hidden md:flex space-x-10 text-sm font-semibold text-slate-600">
+                <a href="index.html#outcomes" class="hover:text-emerald-800 transition">Patient Success</a>
+                <a href="index.html#approach" class="hover:text-emerald-800 transition">Our Protocol</a>
+                <a href="index.html#founders" class="hover:text-emerald-800 transition">Expertise</a>
+            </div>
+            <a href="index.html#lead"
+                class="bg-emerald-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:shadow-lg transition-all active:scale-95">
+                Join the Program
+            </a>
+        </div>
+    </nav>
+
+    <header class="py-20 px-6 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl font-extrabold mb-6">Clinical <span class="gradient-text">Success Cases</span></h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto">A deep dive into the biological transformations achieved
+                through our targeted hormonal reversal protocol.</p>
+        </div>
+    </header>
+
+    <main class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Existing Case 1 -->
+                <div class="success-card p-8 rounded-3xl bg-white shadow-sm">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=60&w=100"
+                            class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
+                        <div>
+                            <p class="font-bold text-sm">Aditi M., 29</p>
+                            <p class="text-xs text-slate-400">Diagnosis: PCOD (4 yrs)</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-400">
+                            <span>Biomarker</span>
+                            <span>Before</span>
+                            <span class="text-emerald-600">After 6mo</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">Cycles</span>
+                            <span class="text-sm text-red-400">Irregular</span>
+                            <span class="text-sm font-bold text-emerald-600">28 Days</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">Weight</span>
+                            <span class="text-sm text-red-400">82 kg</span>
+                            <span class="text-sm font-bold text-emerald-600">71 kg</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed italic">"I was told I'd need pills forever.
+                        ThyroVaidya's protocol changed my metabolism entirely."</p>
+                </div>
+
+                <!-- Existing Case 2 -->
+                <div class="success-card p-8 rounded-3xl bg-white shadow-sm border-emerald-100 border">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=60&w=100"
+                            class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
+                        <div>
+                            <p class="font-bold text-sm">Rajesh K., 42</p>
+                            <p class="text-xs text-slate-400">Diagnosis: Hypothyroidism</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-400">
+                            <span>Biomarker</span>
+                            <span>Before</span>
+                            <span class="text-emerald-600">After 4mo</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">TSH Level</span>
+                            <span class="text-sm text-red-400">9.2 mIU/L</span>
+                            <span class="text-sm font-bold text-emerald-600">2.4 mIU/L</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">Energy</span>
+                            <span class="text-sm text-red-400">Chronic Fatigue</span>
+                            <span class="text-sm font-bold text-emerald-600">High</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed italic">"The brain fog is gone. My reports are now
+                        within range without increasing my synthetic dosage."</p>
+                </div>
+
+                <!-- Existing Case 3 -->
+                <div class="success-card p-8 rounded-3xl bg-white shadow-sm">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=60&w=100"
+                            class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
+                        <div>
+                            <p class="font-bold text-sm">Meera V., 35</p>
+                            <p class="text-xs text-slate-400">Diagnosis: Hypertension</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-400">
+                            <span>Biomarker</span>
+                            <span>Before</span>
+                            <span class="text-emerald-600">After 3mo</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">BP (Sys)</span>
+                            <span class="text-sm text-red-400">155 mmHg</span>
+                            <span class="text-sm font-bold text-emerald-600">122 mmHg</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">Stress</span>
+                            <span class="text-sm text-red-400">Extreme</span>
+                            <span class="text-sm font-bold text-emerald-600">Managed</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed italic">"Natural, sustainable, and scientifically
+                        proven. My doctor was impressed by the blood work."</p>
+                </div>
+
+                <!-- New Case 4 -->
+                <div class="success-card p-8 rounded-3xl bg-white shadow-sm">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=60&w=100"
+                            class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
+                        <div>
+                            <p class="font-bold text-sm">Sanya R., 31</p>
+                            <p class="text-xs text-slate-400">Diagnosis: PCOS & Acne</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-400">
+                            <span>Biomarker</span>
+                            <span>Before</span>
+                            <span class="text-emerald-600">After 5mo</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">Skin Clarity</span>
+                            <span class="text-sm text-red-400">Severe Acne</span>
+                            <span class="text-sm font-bold text-emerald-600">Clear</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">Insulin</span>
+                            <span class="text-sm text-red-400">Resistance</span>
+                            <span class="text-sm font-bold text-emerald-600">Optimal</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed italic">"I regained my confidence. The hormonal
+                        shift was visible on my face within 3 months."</p>
+                </div>
+
+                <!-- New Case 5 -->
+                <div class="success-card p-8 rounded-3xl bg-white shadow-sm">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=60&w=100"
+                            class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
+                        <div>
+                            <p class="font-bold text-sm">Arjun V., 45</p>
+                            <p class="text-xs text-slate-400">Diagnosis: Prediabetes</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-400">
+                            <span>Biomarker</span>
+                            <span>Before</span>
+                            <span class="text-emerald-600">After 4mo</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">HbA1c</span>
+                            <span class="text-sm text-red-400">6.4%</span>
+                            <span class="text-sm font-bold text-emerald-600">5.4%</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">Visceral Fat</span>
+                            <span class="text-sm text-red-400">High</span>
+                            <span class="text-sm font-bold text-emerald-600">Reduced</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed italic">"Reversed my prediabetes without getting on
+                        Metformin. The focus on gut health was the key."</p>
+                </div>
+
+                <!-- New Case 6 -->
+                <div class="success-card p-8 rounded-3xl bg-white shadow-sm">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&q=60&w=100"
+                            class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
+                        <div>
+                            <p class="font-bold text-sm">Priyanka S., 38</p>
+                            <p class="text-xs text-slate-400">Diagnosis: Hashimoto's</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-slate-400">
+                            <span>Biomarker</span>
+                            <span>Before</span>
+                            <span class="text-emerald-600">After 7mo</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">Antibodies</span>
+                            <span class="text-sm text-red-400">450 IU/ml</span>
+                            <span class="text-sm font-bold text-emerald-600">120 IU/ml</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-50 p-3 rounded-lg">
+                            <span class="text-sm font-semibold">Mood</span>
+                            <span class="text-sm text-red-400">Depressive</span>
+                            <span class="text-sm font-bold text-emerald-600">Stable</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed italic">"The inflammatory markers dropped
+                        significantly. I finally feel like myself again after years."</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-20 bg-emerald-900 text-white px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8 italic">Biological reversal is possible.</h2>
+            <a href="index.html#lead"
+                class="inline-block bg-white text-emerald-900 font-bold px-10 py-4 rounded-2xl hover:bg-emerald-50 transition-all">Start
+                Your Journey</a>
+            <div class="mt-16 pt-8 border-t border-emerald-800 text-sm text-emerald-400">
+                &copy; 2026 ThyroVaidya Ayurvedic Clinical Protocol. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
