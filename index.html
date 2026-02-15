@@ -409,7 +409,9 @@
 
                 <div class="lg:w-1/2 w-full relative z-10" data-aos="fade-left" data-aos-delay="200">
                     <div class="bg-[#fafcfb] p-8 md:p-10 rounded-3xl border border-emerald-100/50 shadow-inner">
-                        <form id="consultation-form" class="flex flex-col gap-6">
+                        <form id="consultation-form" class="flex flex-col gap-6" name="consultation"
+                            data-netlify="true">
+                            <input type="hidden" name="form-name" value="consultation" />
                             <div class="flex flex-col gap-2">
                                 <label class="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Full
                                     Name</label>
@@ -475,11 +477,27 @@
 
         document.getElementById('consultation-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            document.getElementById('consultation-form').classList.add('hidden');
-            document.getElementById('success-message').classList.remove('hidden');
 
-            // Scroll to the message area
-            document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+                .then(() => {
+                    form.classList.add('hidden');
+                    document.getElementById('success-message').classList.remove('hidden');
+                    // Scroll to the message area
+                    document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                })
+                .catch((error) => {
+                    console.error('Form submission error:', error);
+                    // Fallback for user experience
+                    form.classList.add('hidden');
+                    document.getElementById('success-message').classList.remove('hidden');
+                });
         });
 
         function resetForm() {
