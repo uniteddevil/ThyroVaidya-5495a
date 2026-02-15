@@ -4,10 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKSCYC2S05"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
+
+        // Default consent state (denied until user interacts with banner)
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKSCYC2S05"></script>
+    <script>
         gtag('js', new Date());
 
         gtag('config', 'G-RKSCYC2S05');
@@ -191,6 +201,7 @@
             </div>
         </div>
     </footer>
+    <script src="consent.js"></script>
 </body>
 
 </html>
