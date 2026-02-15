@@ -336,30 +336,109 @@
     </section>
 
 
-    <section id="lead" class="py-32 px-6">
-        <div class="max-w-4xl mx-auto text-center" id="assessment-container">
-            <h2 class="text-5xl font-bold mb-8 italic">Ready to reverse the cycle?</h2>
-            <p class="text-slate-500 text-xl mb-12">Take our 2-minute diagnostic quiz to identify your hormonal root
-                cause.</p>
-            <form id="assessment-form" class="max-w-lg mx-auto flex flex-col gap-4">
-                <input type="email" required placeholder="Enter your email"
-                    class="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:ring-2 focus:ring-emerald-500 outline-none">
-                <button type="submit"
-                    class="w-full bg-emerald-900 text-white font-bold py-5 rounded-2xl shadow-xl hover:bg-emerald-800 transition-all">Get
-                    My Free Assessment Guide</button>
-            </form>
-        </div>
+    <section id="lead" class="py-24 px-6 bg-[#f8fbfa]">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-2xl border border-emerald-50 relative overflow-hidden flex flex-col lg:flex-row gap-16 items-center"
+                data-aos="zoom-in">
+                <!-- Decorative background elements -->
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-emerald-50 rounded-full blur-3xl opacity-50 -mr-32 -mt-32">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-64 h-64 bg-[#4fd1c5] rounded-full blur-3xl opacity-10 -ml-32 -mb-32">
+                </div>
 
-        <div id="success-message"
-            class="hidden max-w-2xl mx-auto text-center py-20 bg-emerald-50 rounded-3xl border border-emerald-100">
-            <div
-                class="w-20 h-20 bg-emerald-800 rounded-full flex items-center justify-center text-white text-4xl mx-auto mb-8">
-                ✓</div>
-            <h2 class="text-4xl font-bold mb-4 text-emerald-900">Assessment Sent!</h2>
-            <p class="text-emerald-700 text-lg mb-8">Check your inbox. Our clinically-vetted assessment guide is on its
-                way to you.</p>
-            <button onclick="resetForm()" class="text-emerald-800 font-bold border-b-2 border-emerald-800 pb-1">Send to
-                another email</button>
+                <div class="lg:w-1/2 relative z-10">
+                    <span class="text-emerald-800 font-bold tracking-widest text-xs uppercase mb-4 block"
+                        data-aos="fade-up" data-aos-delay="100">Step One to Reversal</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight" data-aos="fade-up"
+                        data-aos-delay="200">
+                        Book Your <span class="gradient-text italic">Free Consultation</span>
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-md" data-aos="fade-up"
+                        data-aos-delay="300">
+                        Speak with our experts to understand the root cause of your hormonal imbalance and how our
+                        protocol can help you reverse it naturally.
+                    </p>
+
+                    <ul class="space-y-6 mb-12" data-aos="fade-up" data-aos-delay="400">
+                        <li class="flex items-center gap-4">
+                            <div
+                                class="w-6 h-6 rounded-full bg-emerald-900 flex items-center justify-center text-white text-[10px]">
+                                ✓</div>
+                            <span class="font-semibold text-slate-700">100% Privacy & Clinical Precision</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div
+                                class="w-6 h-6 rounded-full bg-emerald-900 flex items-center justify-center text-white text-[10px]">
+                                ✓</div>
+                            <span class="font-semibold text-slate-700">Ayurvedic Reversal, Not Suppression</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div
+                                class="w-6 h-6 rounded-full bg-emerald-900 flex items-center justify-center text-white text-[10px]">
+                                ✓</div>
+                            <span class="font-semibold text-slate-700">No Synthetic Medications</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:w-1/2 w-full relative z-10" data-aos="fade-left" data-aos-delay="200">
+                    <div class="bg-[#fafcfb] p-8 md:p-10 rounded-3xl border border-emerald-100/50 shadow-inner">
+                        <form id="consultation-form" class="flex flex-col gap-6">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Full
+                                    Name</label>
+                                <input type="text" name="name" required placeholder="Enter your full name"
+                                    class="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none transition-all placeholder:text-slate-300">
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">WhatsApp
+                                    Number</label>
+                                <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX"
+                                    class="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none transition-all placeholder:text-slate-300">
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs font-bold text-slate-400 uppercase tracking-wider ml-1">Primary
+                                    Concern</label>
+                                <select required name="concern"
+                                    class="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none transition-all appearance-none cursor-pointer">
+                                    <option value="" disabled selected>Select your concern</option>
+                                    <option value="PCOD/PCOS">PCOD / PCOS</option>
+                                    <option value="Thyroid">Thyroid Issues</option>
+                                    <option value="Weight Management">Weight Management</option>
+                                    <option value="Skin/Acne">Skin / Acne Problems</option>
+                                    <option value="Other">Other Metabolic Health</option>
+                                </select>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-emerald-900 text-white font-bold py-5 rounded-2xl shadow-xl hover:bg-emerald-800 hover:shadow-emerald-900/10 active:scale-[0.98] transition-all mt-4 text-lg">
+                                Reserve My Expert Call
+                            </button>
+
+                            <p
+                                class="text-center text-[10px] text-slate-400 mt-2 uppercase tracking-widest leading-relaxed">
+                                Our experts will connect with you on WhatsApp within 24 hours.
+                            </p>
+                        </form>
+
+                        <div id="success-message" class="hidden text-center py-10">
+                            <div
+                                class="w-16 h-16 bg-emerald-800 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6">
+                                ✓</div>
+                            <h3 class="text-3xl font-bold mb-4 text-emerald-900 italic">Booking Confirmed!</h3>
+                            <p class="text-slate-600 text-lg mb-8 leading-relaxed">Our clinical specialist will reach
+                                out to you shortly to schedule your free consultation.</p>
+                            <button type="button" onclick="resetForm()"
+                                class="text-emerald-800 font-bold border-b-2 border-emerald-800 transition hover:text-emerald-600 hover:border-emerald-600">Back
+                                to form</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -370,18 +449,18 @@
             offset: 100
         });
 
-        document.getElementById('assessment-form').addEventListener('submit', function (e) {
+        document.getElementById('consultation-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            document.getElementById('assessment-container').classList.add('hidden');
+            document.getElementById('consultation-form').classList.add('hidden');
             document.getElementById('success-message').classList.remove('hidden');
 
-            // Scroll to the message
+            // Scroll to the message area
             document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
 
         function resetForm() {
-            document.getElementById('assessment-form').reset();
-            document.getElementById('assessment-container').classList.remove('hidden');
+            document.getElementById('consultation-form').reset();
+            document.getElementById('consultation-form').classList.remove('hidden');
             document.getElementById('success-message').classList.add('hidden');
         }
     </script>
