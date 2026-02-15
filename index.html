@@ -8,6 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
         rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -15,25 +18,55 @@
         }
 
         .glass {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
 
         .success-card {
-            transition: transform 0.3s ease;
-            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #eef2f1;
+            background: #ffffff;
         }
 
         .success-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px) scale(1.02);
             border-color: #1a5d5a;
+            box-shadow: 0 20px 40px -20px rgba(26, 93, 90, 0.15);
         }
 
         .gradient-text {
-            background: linear-gradient(90deg, #1a5d5a, #4fd1c5);
+            background: linear-gradient(135deg, #1a5d5a 0%, #38a169 50%, #4fd1c5 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .premium-shadow {
+            box-shadow: 0 10px 30px -10px rgba(26, 93, 90, 0.1);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(79, 209, 197, 0.05), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(26, 93, 90, 0.03), transparent 40%);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
         }
     </style>
 </head>
@@ -60,17 +93,17 @@
         </div>
     </nav>
 
-    <header class="relative px-6 pt-20 pb-32 overflow-hidden">
+    <header class="relative px-6 pt-20 pb-32 overflow-hidden hero-gradient">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <h1 class="text-6xl font-extrabold leading-[1.1] mb-8">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="text-6xl font-extrabold leading-[1.1] mb-8 tracking-tight">
                     Hormonal <span class="gradient-text">Reversal</span> <br>Built on Science.
                 </h1>
                 <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-lg">
                     We combine 10+ years of Ayurvedic clinical precision with a modern data-driven approach to reverse
                     PCOD and Thyroid issues.
                 </p>
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="text-center">
                         <p class="text-2xl font-bold text-emerald-900">92%</p>
                         <p class="text-xs font-semibold text-slate-500 uppercase">Success Rate</p>
@@ -87,8 +120,8 @@
                     </div>
                 </div>
             </div>
-            <div class="relative">
-                <div class="rounded-3xl shadow-2xl overflow-hidden border-8 border-white bg-white">
+            <div class="relative" data-aos="zoom-in" data-aos-duration="1200">
+                <div class="rounded-3xl shadow-2xl overflow-hidden border-8 border-white bg-white float-animation">
                     <img src="images/hero.png" alt="Ayurveda Modern Treatment" class="w-full h-[500px] object-cover">
                 </div>
             </div>
@@ -109,7 +142,7 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="success-card p-8 rounded-3xl bg-slate-50">
+                <div class="success-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="images/aditi.png" class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
                         <div>
@@ -138,7 +171,8 @@
                         ThyroVaidya's protocol changed my metabolism entirely."</p>
                 </div>
 
-                <div class="success-card p-8 rounded-3xl bg-slate-50 border-emerald-200">
+                <div class="success-card p-8 rounded-3xl border-emerald-100 ring-4 ring-emerald-50" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="images/rajesh.png" class="w-12 h-12 rounded-full object-cover grayscale"
                             alt="Patient">
@@ -168,7 +202,7 @@
                         within range without increasing my synthetic dosage."</p>
                 </div>
 
-                <div class="success-card p-8 rounded-3xl bg-slate-50">
+                <div class="success-card p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="images/meera.png" class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
                         <div>
@@ -311,6 +345,12 @@
     </section>
 
     <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
         document.getElementById('assessment-form').addEventListener('submit', function (e) {
             e.preventDefault();
             document.getElementById('assessment-container').classList.add('hidden');

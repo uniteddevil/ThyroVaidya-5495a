@@ -8,6 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
         rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -15,22 +18,25 @@
         }
 
         .glass {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
 
         .success-card {
-            transition: transform 0.3s ease;
-            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #eef2f1;
+            background: #ffffff;
         }
 
         .success-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px) scale(1.02);
             border-color: #1a5d5a;
+            box-shadow: 0 20px 40px -20px rgba(26, 93, 90, 0.15);
         }
 
         .gradient-text {
-            background: linear-gradient(90deg, #1a5d5a, #4fd1c5);
+            background: linear-gradient(135deg, #1a5d5a 0%, #38a169 50%, #4fd1c5 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -72,7 +78,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Existing Case 1 -->
-                <div class="success-card p-8 rounded-3xl bg-white shadow-sm">
+                <div class="success-card p-8 rounded-3xl" data-aos="fade-up">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="images/aditi.png" class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
                         <div>
@@ -102,7 +108,8 @@
                 </div>
 
                 <!-- Existing Case 2 -->
-                <div class="success-card p-8 rounded-3xl bg-white shadow-sm border-emerald-100 border">
+                <div class="success-card p-8 rounded-3xl bg-white shadow-sm border-emerald-100 border ring-4 ring-emerald-50"
+                    data-aos="fade-up">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="images/rajesh.png" class="w-12 h-12 rounded-full object-cover grayscale"
                             alt="Patient">
@@ -133,7 +140,7 @@
                 </div>
 
                 <!-- Existing Case 3 -->
-                <div class="success-card p-8 rounded-3xl bg-white shadow-sm">
+                <div class="success-card p-8 rounded-3xl" data-aos="fade-up">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="images/meera.png" class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
                         <div>
@@ -163,7 +170,7 @@
                 </div>
 
                 <!-- New Case 4 -->
-                <div class="success-card p-8 rounded-3xl bg-white shadow-sm">
+                <div class="success-card p-8 rounded-3xl" data-aos="fade-up">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="images/sanya.png" class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
                         <div>
@@ -193,7 +200,7 @@
                 </div>
 
                 <!-- New Case 5 -->
-                <div class="success-card p-8 rounded-3xl bg-white shadow-sm">
+                <div class="success-card p-8 rounded-3xl" data-aos="fade-up">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="images/arjun.png" class="w-12 h-12 rounded-full object-cover grayscale" alt="Patient">
                         <div>
@@ -223,7 +230,7 @@
                 </div>
 
                 <!-- New Case 6 -->
-                <div class="success-card p-8 rounded-3xl bg-white shadow-sm">
+                <div class="success-card p-8 rounded-3xl" data-aos="fade-up">
                     <div class="flex items-center gap-4 mb-6">
                         <img src="images/priyanka.png" class="w-12 h-12 rounded-full object-cover grayscale"
                             alt="Patient">
@@ -268,6 +275,13 @@
         </div>
     </footer>
 
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50
+        });
+    </script>
 </body>
 
 </html>
