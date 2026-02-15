@@ -116,7 +116,6 @@
     function initBanner() {
         const consent = localStorage.getItem('thyrovaidya_consent');
         if (consent) {
-            updateConsent(JSON.parse(consent));
             return;
         }
 
