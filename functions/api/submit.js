@@ -22,7 +22,7 @@ export async function onRequest(context) {
             },
             body: JSON.stringify({
                 from: 'ThyroVaidya <info@thyrovaidya.com>', // Note: Resend requires a verified domain to change the 'from' email.
-                to: 'iamgopalyadav@gmail.com',
+                to: ['iamgopalyadav@gmail.com', 'dhruv.dy@gmail.com'],
                 subject: `New Consultation Request: ${name}`,
                 html: `
           <h3>New Consultation Request</h3>
