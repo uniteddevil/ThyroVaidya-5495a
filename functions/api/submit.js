@@ -21,7 +21,7 @@ export async function onRequest(context) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                from: 'ThyroVaidya <onboarding@resend.dev>', // Note: Resend requires a verified domain to change the 'from' email.
+                from: 'ThyroVaidya <info@thyrovaidya.com>', // Note: Resend requires a verified domain to change the 'from' email.
                 to: 'iamgopalyadav@gmail.com',
                 subject: `New Consultation Request: ${name}`,
                 html: `
