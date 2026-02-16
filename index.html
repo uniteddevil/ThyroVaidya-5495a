@@ -708,22 +708,24 @@
             const form = e.target;
             const formData = new FormData(form);
 
-            fetch("/", {
+            fetch("/api/submit", {
                 method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString(),
+                body: formData,
             })
-                .then(() => {
-                    form.classList.add('hidden');
-                    document.getElementById('success-message').classList.remove('hidden');
-                    // Scroll to the message area
-                    document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        form.classList.add('hidden');
+                        document.getElementById('success-message').classList.remove('hidden');
+                        // Scroll to the message area
+                        document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        throw new Error(data.error || 'Submission failed');
+                    }
                 })
                 .catch((error) => {
                     console.error('Form submission error:', error);
-                    // Fallback for user experience
-                    form.classList.add('hidden');
-                    document.getElementById('success-message').classList.remove('hidden');
+                    alert('Something went wrong. Please try again or contact us directly on WhatsApp.');
                 });
         });
 
